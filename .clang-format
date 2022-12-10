@@ -1,0 +1,6 @@
+BasedOnStyle: WebKit
+
+Language: Cpp
+SortIncludes: CaseSensitive
+ColumnLimit: 77
+SeparateDefinitionBlocks: Always

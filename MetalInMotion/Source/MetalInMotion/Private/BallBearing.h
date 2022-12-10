@@ -8,22 +8,16 @@
 class UStaticMeshComponent;
 
 UCLASS()
-class ABallBearing : public APawn
-{
-	GENERATED_BODY()
+
+class ABallBearing : public APawn {
+    GENERATED_BODY()
 
 public:
-	ABallBearing();
+    ABallBearing();
 
-	virtual void Tick(float DeltaTime) override;
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
+    UStaticMeshComponent* BallMesh = nullptr;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "BallBearing")
-	UStaticMeshComponent* BallMesh;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "BallBearing")
-	float Magnitize = 1.0f;
-
-protected:
-	virtual void BeginPlay() override;
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "BallBearing")
+    float Magnitized = true;
 };
