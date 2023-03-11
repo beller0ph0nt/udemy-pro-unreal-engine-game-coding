@@ -45,7 +45,9 @@ private:
     void Jump();
     void Dash();
 
-    float InputLongitude = 0.0f;
-    float InputLatitude = 0.0f;
     float DashTimer = 0.0f;
+    float InputLatitude = 0.0f;
+    float InputLongitude = 0.0f;
+
+    friend class ABallBearingHUD;
 };

@@ -20,4 +20,6 @@ public:
 
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "BallBearing")
     float Magnitized = true;
+
+    friend class ABallBearingHUD;
 };
